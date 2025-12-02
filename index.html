@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Pet - Gerenciamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mundo Pet </h1>
+        <p>Sistema de Gerenciamento</p>
+    </header>
+
+    <div class="container">
+
+        <section id="cadastro-cliente" class="form-section">
+            <h2>Cadastro de Novo Cliente</h2>
+            <form class="data-form">
+                <div class="form-group">
+                    <label for="c-nome">Nome:</label>
+                    <input type="text" id="c-nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="c-telefone">Telefone:</label>
+                    <input type="tel" id="c-telefone" name="telefone">
+                </div>
+                <div class="form-group">
+                    <label for="c-email">E-mail:</label>
+                    <input type="email" id="c-email" name="email">
+                </div>
+                <button type="submit" class="btn-primary">Registrar Cliente</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="cadastro-pet" class="form-section">
+            <h2>Cadastro de Novo Pet</h2>
+            <form class="data-form">
+                <div class="form-group">
+                    <label for="p-cliente">Dono (ID do Cliente):</label>
+                    <input type="number" id="p-cliente" name="id_cliente" placeholder="Ex: 1 (Reenye Lima)" required>
+                </div>
+                <div class="form-group">
+                    <label for="p-nome">Nome do Pet:</label>
+                    <input type="text" id="p-nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="p-especie">Espécie:</label>
+                    <select id="p-especie" name="especie" required>
+                        <option value="">Selecione...</option>
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="p-raca">Raça:</label>
+                    <input type="text" id="p-raca" name="raca">
+                </div>
+                <button type="submit" class="btn-primary">Registrar Pet</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="historico-atendimentos">
+            <h2>Histórico de Atendimentos</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID Atendimento</th>
+                        <th>Pet</th>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Valor (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Rex (ID 1)</td>
+                        <td>Banho (ID 1)</td>
+                        <td>2025-11-01</td>
+                        <td>50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mimi (ID 2)</td>
+                        <td>Tosa (ID 2)</td>
+                        <td>2025-11-02</td>
+                        <td>60.00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Rex (ID 1)</td>
+                        <td>Tosa (ID 2)</td>
+                        <td>2025-11-03</td>
+                        <td>60.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+</html>
